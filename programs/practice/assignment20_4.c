@@ -1,0 +1,37 @@
+//Accept Character frmo user and check whether it is alphabet is capital or not
+#include<stdio.h>
+#define TRUE 1
+#define FALSE 0
+
+typedef int BOOL;
+
+BOOL ChkAlpha(char ch)
+{
+    BOOL result=FALSE;
+    if((ch >= 'a') && (ch <= 'z') )
+    {
+        result=TRUE;     
+    }
+
+    return result;
+}
+
+int main()
+{
+    char cvalue='\0';
+    BOOL bret=FALSE;
+
+    printf("\nEnter the character :");
+    scanf("%c",&cvalue);
+
+    bret=ChkAlpha(cvalue);
+
+    if(bret == TRUE)
+    {
+        printf("\nIt is in small case  ");
+    }
+    else{
+        printf("\n It is not in small Case ");
+    }
+    return 0;
+}
